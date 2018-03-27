@@ -9,7 +9,7 @@ node() {
           echo "Checkout git"
           sh "whoami"
         //   checkout scm
-          sh "sudo docker run newman:latest"
+          sh "docker run newman:latest"
           
 
        }
