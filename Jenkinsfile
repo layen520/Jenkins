@@ -9,6 +9,8 @@ node() {
           echo "Checkout git"
           sh "whoami"
           checkout scm
+          sh "sudo docker run newman:latest"
+          
 
        }
        //使用Postman测试
