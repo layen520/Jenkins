@@ -1,24 +1,10 @@
 #!groovy
-
 node() {
-
-    try {
-       //检出代码
-       stage('Checkout'){
-
-          echo "Checkout git"
-          sh "whoami"
-        //   checkout scm
-          sh "docker run newman:latest"
-          
-
-       }
-       //使用Postman测试
+    try {    
        stage('Newman Test'){
-            echo "Use Newman to Test"
             script {
-                docker.image('newman:latest').inside {
-                    sh 'newman run ./newman.postman_collection.json -e ./myenv.postman_environment.json --reporters cli' 
+                docker.image('nginx').inside {
+                    sh 'env' 
                 }
             }
        }
