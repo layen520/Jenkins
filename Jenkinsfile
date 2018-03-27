@@ -8,7 +8,7 @@ node() {
 
           echo "Checkout git"
           sh "whoami"
-          checkout scm
+        //   checkout scm
           sh "sudo docker run newman:latest"
           
 
